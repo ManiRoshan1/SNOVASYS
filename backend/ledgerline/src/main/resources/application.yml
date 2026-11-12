@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/ledgerline_db}
+    username: ${DB_USERNAME:ledgerline_app}
+    password: ${DB_PASSWORD:local-development-only}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+server:
+  error:
+    include-message: never
+app:
+  jwt-secret: ${JWT_SECRET:dev-only-secret-change-this-to-a-long-value}
+  jwt-expiration-minutes: 60
+
