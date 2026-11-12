@@ -23,6 +23,8 @@ LedgerLine is a money-movement demo that keeps balances and a double-entry ledge
 
 The API is available at `http://localhost:8080/api`; the Vite app is available at `http://localhost:5173`.
 
+The demo users are `holder` / `holder-password`, `auditor` / `auditor-password`, and `admin` / `admin-password`. Change these before any public deployment; this demo authentication is intentionally a local MVP and should be replaced with a real identity provider for production.
+
 ## Security notes
 
 - Secrets are read from environment variables and `.env` is ignored by Git.
@@ -32,4 +34,3 @@ The API is available at `http://localhost:8080/api`; the Vite app is available a
 - See [THREATS.md](THREATS.md) for the threat model and [PROMPTS.md](PROMPTS.md) for the AI-assisted development record.
 
 This repository describes only functionality that is implemented and tested. Deployment-specific environment variables must be configured in the hosting provider; never upload the local `.env`.
-

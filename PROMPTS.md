@@ -12,7 +12,7 @@ This file is maintained during development. Entries record what was requested, w
 ## 2026-11-12 — authorization design
 
 - **Asked:** Build role-based authorization for account holders, auditors, and administrators.
-- **Produced:** A JWT-based Spring Security boundary with role checks and ownership checks in the service layer.
+- **Produced:** A Spring Security Basic Auth boundary with role checks and ownership checks in the service layer.
 - **What was wrong:** A role check alone would allow one account holder to access another holder's account.
 - **Did instead:** Added explicit owner checks for account reads and writes, while auditors receive read-only audit access. Commit: `66bf750`
 
